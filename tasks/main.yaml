@@ -74,6 +74,6 @@
   with_items:
     - libopensplice64
 
-- name: get ROS 2.0 source code
-  script: scripts/get_ros2.sh
+#- name: get ROS 2.0 source code
+#  script: scripts/get_ros2.sh
 
