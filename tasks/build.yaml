@@ -1,0 +1,7 @@
+- name: create directory
+  file: path=/home/vagrant/ros2/src state=directory mode=0755
+- name: get ros2 repos 
+  get_url: 
+    url: https://raw.githubusercontent.com/ros2/ros2/release-latest/ros2.repos
+    dest: /home/vagrant/ros2
+- name: 

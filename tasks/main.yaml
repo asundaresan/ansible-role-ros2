@@ -1,19 +1,16 @@
 ---
 - name: set locale
   locale_gen: name="{{ locale }}" state=present
-
 - name: add ROS repository key
   apt_key:
     keyserver: "{{ ros_apt_keyserver }}"
     id: 421C365BD9FF1F717815A3895523BAEEB01FA116
     state: present
-
 - name: add ROS repository
   apt_repository:
     repo: "deb {{ ros_apt_package_uri }} {{ ansible_lsb.codename }} main"
     state: present
     update_cache: yes
-
 - name: add OSRF repository key
   apt_key:
     keyserver: "{{ ros_apt_keyserver }}"
